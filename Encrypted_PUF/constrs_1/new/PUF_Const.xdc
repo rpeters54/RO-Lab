@@ -1,0 +1,98 @@
+## Allow Combinatorial Loops
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO0/a/a/out}]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO1/a/a/out}]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO2/a/a/out}]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO3/a/a/out}]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO4/a/a/out}]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO5/a/a/out}]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO6/a/a/out}]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO7/a/a/out}]
+set_property ALLOW_COMBINATORIAL_LOOPS true [get_nets {PW/RO8/a/a/out}]
+
+
+## Clock signal
+
+set_property PACKAGE_PIN W5 [get_ports clk]							
+	set_property IOSTANDARD LVCMOS33 [get_ports clk]
+	create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports clk]
+
+## LEDs
+set_property PACKAGE_PIN U16 [get_ports {response[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {response[0]}]
+set_property PACKAGE_PIN E19 [get_ports {response[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {response[1]}]
+set_property PACKAGE_PIN U19 [get_ports {response[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {response[2]}]
+set_property PACKAGE_PIN V19 [get_ports {response[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {response[3]}]
+set_property PACKAGE_PIN W18 [get_ports {response[4]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {response[4]}]
+set_property PACKAGE_PIN U15 [get_ports {response[5]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {response[5]}]
+set_property PACKAGE_PIN U14 [get_ports {response[6]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {response[6]}]
+set_property PACKAGE_PIN V14 [get_ports {response[7]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {response[7]}]
+	
+set_property PACKAGE_PIN L1 [get_ports {valid}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {valid}]
+	
+#7 segment display
+set_property PACKAGE_PIN W7 [get_ports {sseg[6]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sseg[6]}]
+set_property PACKAGE_PIN W6 [get_ports {sseg[5]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sseg[5]}]
+set_property PACKAGE_PIN U8 [get_ports {sseg[4]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sseg[4]}]
+set_property PACKAGE_PIN V8 [get_ports {sseg[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sseg[3]}]
+set_property PACKAGE_PIN U5 [get_ports {sseg[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sseg[2]}]
+set_property PACKAGE_PIN V5 [get_ports {sseg[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sseg[1]}]
+set_property PACKAGE_PIN U7 [get_ports {sseg[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sseg[0]}]
+
+set_property PACKAGE_PIN U2 [get_ports {an[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {an[0]}]
+set_property PACKAGE_PIN U4 [get_ports {an[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {an[1]}]
+set_property PACKAGE_PIN V4 [get_ports {an[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {an[2]}]
+set_property PACKAGE_PIN W4 [get_ports {an[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {an[3]}]	
+
+## Switches
+set_property PACKAGE_PIN V17 [get_ports {challenge[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {challenge[0]}]
+set_property PACKAGE_PIN V16 [get_ports {challenge[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {challenge[1]}]
+set_property PACKAGE_PIN W16 [get_ports {challenge[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {challenge[2]}]
+set_property PACKAGE_PIN W17 [get_ports {challenge[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {challenge[3]}]
+set_property PACKAGE_PIN W15 [get_ports {challenge[4]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {challenge[4]}]
+set_property PACKAGE_PIN V15 [get_ports {challenge[5]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {challenge[5]}]
+set_property PACKAGE_PIN W14 [get_ports {challenge[6]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {challenge[6]}]
+set_property PACKAGE_PIN W13 [get_ports {challenge[7]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {challenge[7]}]
+	
+set_property PACKAGE_PIN W2 [get_ports {output_select[0]}]					
+    set_property IOSTANDARD LVCMOS33 [get_ports {output_select[0]}]
+set_property PACKAGE_PIN U1 [get_ports {output_select[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {output_select[1]}]
+set_property PACKAGE_PIN T1 [get_ports {output_select[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {output_select[2]}]
+set_property PACKAGE_PIN R2 [get_ports {output_select[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {output_select[3]}]
+	
+## Buttons
+# center button
+set_property PACKAGE_PIN U18 [get_ports start]						
+	set_property IOSTANDARD LVCMOS33 [get_ports start]
+# left button
+set_property PACKAGE_PIN W19 [get_ports reset]						
+	set_property IOSTANDARD LVCMOS33 [get_ports reset]
